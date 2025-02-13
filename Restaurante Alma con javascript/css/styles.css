@@ -1,0 +1,616 @@
+/* Estilo global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Asegura consistencia en todos los elementos */
+}
+
+
+/* Estilo para el Header */
+header {
+  background-color: #3B3936;/* Fondo para el encabezado */
+  color: white;
+  padding: 5px; /* Padding uniforme */
+  text-align: center;
+  box-shadow: 0 2px 5px rgb(74, 74, 74);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+
+/* Estilo body */
+body {
+  margin: 0;
+  padding: 20px; /* Padding uniforme para el cuerpo */
+  background-color: #F1F1F1;
+  /*font-family: 'DM Serif Text', serif;*/
+  padding-top: 240px; /* Ajusta este valor según la altura del header */
+} 
+
+
+section {
+  padding: 20px; /* Padding uniforme */
+  margin-bottom: 30px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  scroll-margin-top: 120px; /* Ajusta este valor según la altura del header */
+}
+
+/* Estilo para la barra lateral */
+body.scrolled header {
+  width: 250px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  text-align: left;
+}
+
+body.scrolled main {
+  margin-right: 250px;
+}
+
+body.scrolled header h1 {
+  font-size: 2em;
+}
+
+body.scrolled nav ul {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+body.scrolled nav ul li {
+  margin: 10px 0;
+}
+
+body.scrolled footer {
+  margin-right: 250px;
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+  body.scrolled header {
+    width: 150px;
+    padding: 10px;
+  }
+
+  body.scrolled main {
+    margin-right: 150px;
+  }
+
+  body.scrolled header h1 {
+    font-size: 1.5em;
+  }
+
+  body.scrolled nav ul li {
+    margin: 5px 0;
+  }
+
+  body.scrolled footer {
+    margin-right: 150px;
+  }
+}
+
+header h1 {
+  margin: 0;
+  font-size: 3.5em;/* Título grande */
+  font-weight: bold;
+}
+
+/* Estilo de la barra de navegación */
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 10px; /* Padding uniforme */
+  margin: 10px 0; /* Márgenes controlados */
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+  font-family: 'Rubik Vinyl', sans-serif;
+}
+
+/* Efecto hover para los enlaces */
+nav ul li a:hover {
+  color: #B2BEBF; /* Cambiar a un gris claro al pasar el ratón */
+  transform: scale(1.1); /* Ampliar ligeramente el enlace */
+}
+
+/* Secciones generales */
+section {
+  padding: 20px; /* Padding uniforme */
+  margin-bottom: 30px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  scroll-margin-top: 120px; /* Ajusta este valor según la altura del header */
+}
+
+/* Estilo para los títulos de las secciones */
+h2 {
+  color: #B2BEBF;
+  margin-bottom: 20px;
+  font-family: 'Dancing Script', cursive;
+}
+
+/* Sección Inicio */
+#inicio {
+  text-align: center;
+  padding: 20px; /* Ajuste de padding */
+}
+
+#inicio img {
+  width: 100%; /* Ajusta el ancho al contenedor */
+  max-width: 300px; /* Tamaño máximo uniforme para ambas imágenes */
+  height: 200px; /* Fija una altura consistente */
+  object-fit: cover; /* Recorta y centra la imagen para mantener proporciones */
+  border-radius: 8px;
+  margin: 10px; /* Espaciado uniforme */
+}
+/* Boton personalizado*/
+.boton-personalizado {
+  display: inline-block;            /* Hace que se comporte como un botón */
+  background-color: #B2BEBF;       /* Color de fondo */
+  color: white;                    /* Color del texto */
+  padding: 12px 24px;              /* Espaciado interno */
+  font-size: 18px;                 /* Tamaño del texto */
+  font-weight: bold;               /* Texto en negrita */
+  text-align: center;              /* Centra el texto */
+  text-decoration: none;           /* Quita el subrayado */
+  border-radius: 8px;              /* Bordes redondeados */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra del botón */
+  transition: all 0.3s ease;       /* Efecto de transición suave */
+}
+
+.boton-personalizado:hover {
+  background-color: #859c9e;       /* Color al pasar el mouse */
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+  transform: translateY(-2px);    /* Leve elevación al pasar el mouse */
+}
+
+.boton-personalizado:active {
+  background-color: #4d5253;       /* Color al hacer clic */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra más tenue */
+  transform: translateY(0);       /* Regresa al nivel inicial */
+}
+
+/* Estilo para la sección "¿Quiénes somos?" */
+#quienes-somos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
+/* Estilo para los videos */
+.video2 {
+  margin-top: -1%;
+  margin-bottom: 2%;
+  margin-left: 25%;
+  border-radius: 8px;
+  max-width: 50%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25); /* Sombra para darle un efecto más elegante */
+}
+
+video {
+  margin-top: 20px;
+  border-radius: 8px;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25); /* Sombra para darle un efecto más elegante */
+}
+
+/* Galerías */
+.galeria {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.galeria img {
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Productos */
+#productos {
+  text-align: center;
+  padding: 20px; /* Uniformidad */
+}
+
+/* Estilo para la galería de productos */
+.galeria-productos {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  padding: 20px; /* Padding para separar elementos */
+}
+
+.producto {
+  text-align: center;
+  max-width: 200px;
+  transition: transform 0.3s ease;/* Efecto al pasar el ratón */
+}
+
+.producto img {
+  width: 200px; /* Ancho fijo */
+  height: 250px; /* Alto fijo */
+  object-fit: cover; /* Recorta la imagen para que mantenga la proporción */
+  border-radius: 8px; /* Bordes redondeados */
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+/* Efecto hover en los productos */
+.producto:hover {
+  transform: scale(1.05); /* Ampliar ligeramente mejora mucho la interactividad */
+}
+
+.producto img:hover {
+  transform: scale(1.1); /* Efecto zoom en la imagen mola mucho jejeje*/
+}
+
+/* Tabla de productos y servicios */
+table {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  text-align: center;
+}
+
+table, th, td {
+  border: 1px solid #ddd; /* Bordes suaves para la tabla */
+}
+
+th, td {
+  padding: 12px;
+}
+
+th {
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+tbody tr:hover {
+  background-color: #f9f9f9; /* Color suave para las filas al pasar el ratón */
+}
+
+/* Estilo para la sección de contacto */
+#contacto {
+  background-color: #ffffff;
+  padding: 30px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#contacto h2 {
+  text-align: center;
+  color: #B2BEBF;
+}
+
+#contacto p {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+#contacto h3 {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Estilo para el formulario */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+form label {
+  font-weight: bold;
+  color: #B2BEBF;
+}
+
+form input, form textarea {
+  padding: 10px;
+  border: 1px solid #889C9B;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+}
+
+form input:focus, form textarea:focus {
+  border-color: #486966;
+  outline: none;
+}
+
+form button {
+  background-color: #3B3936;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #486966;
+}
+
+/* Validación de campos */
+form input:invalid, form textarea:invalid {
+  border-color: #BD2A2E;
+}
+
+form input:valid, form textarea:valid {
+  border-color: #486966;
+}
+
+/* Estilos generales para el formulario */
+#trabaja {
+  background-color: #f4f4f4;
+  padding: 30px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Formularios */
+
+/* Título de la sección */
+#trabaja h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Estilo del formulario */
+form {
+  max-width: 600px;
+  margin: 20px auto; /* Centrado y espaciado */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Estilo para los inputs y selects */
+input, select, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+/* Efecto focus en los inputs y selects */
+input:focus, select:focus, textarea:focus {
+  border-color: #486966;
+  outline: none;
+}
+
+/* Estilo para el botón de envío */
+button {
+  background-color: #486966;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #486966;
+}
+
+/* Estilos para la validación */
+input:invalid, textarea:invalid {
+  border-color: #BD2A2E;
+}
+
+input:valid, textarea:valid {
+  border-color: #486966;
+}
+
+/* Estilo para el fieldset */
+fieldset {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+/* Estilo para el legend */
+legend {
+  font-size: 18px;
+  font-weight: bold;
+  color: #486966;
+}
+
+/* Estilo para las etiquetas */
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Footer */
+footer {
+  background-color: #3B3936;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+footer p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer .social-media-icons {
+  margin: 10px 0;
+}
+
+footer .social-media-icons a {
+  margin: 0 10px;
+}
+
+footer .social-media-icons img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+footer .social-media-icons img:hover {
+  transform: scale(1.1); /* Efecto de hover */
+}
+
+footer p a {
+  color: #486966;
+  font-weight: bold;
+}
+
+footer p a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos Responsive */
+
+/* Para pantallas medianas: tablets y dispositivos con ancho máximo de 1024px */
+@media (max-width: 1024px) {
+  header h1 {
+    font-size: 3em; /* Ajusta el tamaño del título */
+  }
+
+  nav ul {
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
+    justify-content: space-around; /* Distribuye los enlaces uniformemente */
+  }
+
+  .galeria, .galeria-productos {
+    flex-direction: column; /* Apila las galerías verticalmente */
+    align-items: center;
+  }
+
+  .galeria img, .producto img {
+    width: 80%; /* Ajusta el tamaño de las imágenes */
+    height: auto;
+  }
+
+  table {
+    font-size: 14px; /* Reduce el tamaño del texto en tablas */
+  }
+}
+
+/* Para pantallas pequeñas: móviles y dispositivos con ancho máximo de 768px */
+@media (max-width: 768px) {
+  body {
+    padding: 10px; /* Reduce el padding general */
+  }
+
+  header h1 {
+    font-size: 2.5em; /* Reduce el tamaño del título */
+  }
+
+  nav ul {
+    flex-direction: column; /* Apila los enlaces verticalmente */
+    gap: 10px;
+  }
+
+  nav ul li {
+    margin: 10px 0; /* Espaciado entre los enlaces */
+  }
+
+  #inicio img {
+    width: 90%; /* Reduce el tamaño de la imagen de inicio */
+  }
+
+  .galeria, .galeria-productos {
+    flex-direction: column; /* Disposición vertical */
+    gap: 15px;
+  }
+
+  .producto {
+    max-width: 100%; /* Asegura que los productos ocupen todo el ancho disponible */
+  }
+
+  table {
+    font-size: 12px; /* Reduce el tamaño del texto en tablas */
+  }
+
+  form {
+    width: 100%; /* Ajusta el formulario al ancho disponible */
+    padding: 10px;
+  }
+
+  footer p {
+    font-size: 12px; /* Reduce el tamaño del texto en el footer */
+  }
+}
+
+/* Para pantallas muy pequeñas: móviles con ancho máximo de 480px */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2em; /* Reduce aún más el tamaño del título */
+  }
+
+  .galeria img, .producto img {
+    width: 100%; /* Ocupa todo el ancho disponible */
+  }
+
+  #contacto, #trabaja {
+    padding: 10px; /* Reduce el padding en las secciones */
+  }
+
+  nav ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  footer {
+    padding: 10px; /* Ajusta el espaciado del footer */
+  }
+
+  footer p {
+    font-size: 10px; /* Texto más pequeño en el footer */
+  }
+}
